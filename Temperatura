@@ -1,0 +1,32 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		real temperatura
+
+		escreva("--- Verificador de Temperatura ---\n\n")
+
+		
+		escreva("Digite a temperatura atual: ")
+		leia(temperatura)
+
+	
+
+		
+		se (temperatura > 0)
+		{
+			escreva("A temperatura informada (", temperatura, "°C) é POSITIVA.\n")
+		}
+		senao se (temperatura < 0)
+		{
+			escreva("A temperatura informada (", temperatura, "°C) é NEGATIVA.\n")
+		}
+		senao
+		{
+			escreva("A temperatura informada é exatamente 0°C (NULA/NEUTRA).\n")
+		}
+
+		
+	}
+}
