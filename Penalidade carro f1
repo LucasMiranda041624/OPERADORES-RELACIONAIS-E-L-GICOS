@@ -1,0 +1,44 @@
+programa
+{
+	
+	inclua biblioteca Matematica --> mat
+	
+	funcao inicio()
+	{
+		
+		real velocidade, velocidade_excedida, valor_multa
+		real LIMITE_VELOCIDADE = 80.0
+		real VALOR_POR_KM = 7000.0
+
+		escreva(" Sistema de Controle de Velocidade - Boxes F1 \n\n")
+
+		
+		escreva("Informe a velocidade do carro ao passar pelos boxes (Km/h): ")
+		leia(velocidade)
+
+		
+
+	
+		se (velocidade > LIMITE_VELOCIDADE)
+		{
+			
+			velocidade_excedida = velocidade - LIMITE_VELOCIDADE
+			
+			
+			valor_multa = velocidade_excedida * VALOR_POR_KM
+
+			
+			escreva(" ALERTA: Limite de velocidade ultrapassado!\n")
+			escreva("-> O piloto foi penalizado em 5 segundos no tempo total.\n")
+			escreva("-> Velocidade excedida: ", mat.arredondar(velocidade_excedida, 2), " Km/h\n")
+			escreva("-> Custo da multa para a equipe: $ ", mat.arredondar(valor_multa, 2), " dólares.\n")
+		}
+		senao
+		{
+			escreva(" Velocidade dentro do limite permitido.\n")
+			escreva("-> Passagem limpa pelos boxes. Nenhuma penalidade aplicada.\n")
+		}
+
+		
+	}
+}
