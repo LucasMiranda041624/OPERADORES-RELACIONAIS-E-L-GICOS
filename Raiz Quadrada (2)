@@ -1,0 +1,57 @@
+programa
+{
+	
+	inclua biblioteca Matematica --> mat
+	funcao inicio()
+	{
+		
+		real a, b, c, delta, x1, x2
+
+		escreva("--- Calculadora de Equação de 2° Grau ---\n")
+		escreva("Formato: ax² + bx + c = 0\n\n")
+
+		// Entrada de dados pelo usuário
+		escreva("Digite o valor de a: ")
+		leia(a)
+
+		
+		se (a == 0)
+		{
+			escreva("\nErro: O valor de 'a' não pode ser 0 em uma equação de segundo grau.\n")
+		}
+		senao
+		{
+			escreva("Digite o valor de b: ")
+			leia(b)
+
+			escreva("Digite o valor de c: ")
+			leia(c)
+
+			
+			delta = mat.potencia(b, 2.0) - (4 * a * c)
+
+			
+			escreva("\n----------------------------------------\n")
+			escreva("a. Valores informados: a = ", a, ", b = ", b, ", c = ", c, "\n")
+			escreva("b. O valor de delta (Δ) é: ", delta, "\n")
+
+			
+			se (delta < 0)
+			{
+				escreva("c. Não é possível calcular x1 (Não existem raízes reais para Delta negativo).\n")
+				escreva("d. Não é possível calcular x2 (Não existem raízes reais para Delta negativo).\n")
+			}
+			senao
+			{
+				
+				x1 = (-b + mat.raiz(delta, 2.0)) / (2 * a)
+				x2 = (-b - mat.raiz(delta, 2.0)) / (2 * a)
+
+				
+				escreva("c. O valor de x1 é: ", mat.arredondar(x1, 2), "\n")
+				escreva("d. O valor de x2 é: ", mat.arredondar(x2, 2), "\n")
+			}
+			escreva("----------------------------------------\n")
+		}
+	}
+}
