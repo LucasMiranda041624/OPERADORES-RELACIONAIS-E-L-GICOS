@@ -1,0 +1,44 @@
+programa
+{
+	inclua biblioteca Texto --> txt
+	
+	funcao inicio()
+	{
+		
+		cadeia entrada
+		caracter letra
+
+		
+		escreva("Digite uma letra: ")
+		leia(entrada)
+
+		
+		entrada = txt.caixa_alta(entrada)
+		
+		
+		letra = txt.obter_caracter(entrada, 0)
+		
+		se (letra < 'A' ou letra > 'Z')
+		{
+			escreva("Erro: O caractere digitado não é uma letra válida!")
+		}
+		senao
+		{
+			
+			escolha (letra)
+			{
+				caso 'A':
+				caso 'E':
+				caso 'I':
+				caso 'O':
+				caso 'U':
+					escreva("A letra '", letra, "' é uma VOGAL.")
+					pare
+					
+				caso contrario:
+					escreva("A letra '", letra, "' é uma CONSOANTE.")
+			}
+		}
+		escreva("\n")
+	}
+}
