@@ -1,0 +1,59 @@
+programa
+{
+	funcao inicio()
+	{
+		
+		inteiro codigo, quantidade
+		real preco_unitario = 0.0, valor_total
+
+		escreva("=== CARDÁPIO DA LANCHONETE ===\n")
+		escreva("100 - Cachorro quente   | R$ 5.00\n")
+		escreva("101 - Bauru             | R$ 2.60\n")
+		escreva("102 - Bauru c/ovo       | R$ 3.80\n")
+		escreva("103 - Hamburger         | R$ 9.00\n")
+		escreva("104 - Cheeseburger      | R$ 11.00\n")
+		escreva("105 - Refrigerante      | R$ 3.00\n")
+		escreva("106 - Semente dos Deuses| R$ 1000.00\n")
+		
+		escreva("Digite o código do item pedido: ")
+		leia(codigo)
+		
+		escreva("Digite a quantidade desejada: ")
+		leia(quantidade)
+
+		
+		escolha (codigo)
+		{
+			caso 100:
+				preco_unitario = 5.00
+				pare
+			caso 101:
+				preco_unitario = 2.60
+				pare
+			caso 102:
+				preco_unitario = 3.80
+				pare
+			caso 103:
+				preco_unitario = 9.00
+				pare
+			caso 104:
+				preco_unitario = 11.00
+				pare
+			caso 105:
+				preco_unitario = 3.00
+				pare
+			caso 106:
+				preco_unitario = 1000.00
+				pare
+			caso contrario:
+				escreva("\nCódigo inválido! Não foi possível calcular o valor.\n")
+				
+				retorne 
+		}
+		valor_total = preco_unitario * quantidade
+		escreva("\n--- Resumo do Pedido ---")
+		escreva("\nQuantidade: ", quantidade)
+		escreva("\nValor Unitário: R$ ", preco_unitario)
+		escreva("\nTotal a pagar: R$ ", valor_total, "\n")
+	}
+}
