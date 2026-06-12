@@ -26,7 +26,6 @@ programa
 
 		
 		escreva("Resultado das Proposições Lógicas:\n")
-		escreva("----------------------------------\n")
 		escreva("a) ( 2 * 4 == 24/3 ) -> ", a, "\n")
 		escreva("b) ( (15 % 4) < (19 % 6) ) -> ", b, "\n")
 		escreva("c) ( nao(2 < 5) != (8 == 8) ) -> ", c, "\n")
