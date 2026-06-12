@@ -1,0 +1,41 @@
+programa
+{
+	funcao inicio()
+	{
+		
+		real numero1, numero2, numero3, numero4
+
+		
+		escreva("Digite o primeiro número: ")
+		leia(numero1)
+
+		escreva("Digite o segundo número: ")
+		leia(numero2)
+
+		escreva("Digite o terceiro número: ")
+		leia(numero3)
+
+		escreva("Digite o quarto número: ")
+		leia(numero4)
+		se (numero1 > numero2 e numero1 > numero3 e numero1 > numero4)
+		{
+			escreva("O maior número é: ", numero1)
+		}
+		senao se (numero2 > numero1 e numero2 > numero3 e numero2 > numero4)
+		{
+			escreva("O maior número é: ", numero2)
+		}
+		senao se (numero3 > numero1 e numero3 > numero2 e numero3 > numero4)
+		{
+			escreva("O maior número é: ", numero3)
+		}
+		senao se (numero4 > numero1 e numero4 > numero2 e numero4 > numero3)
+		{
+			escreva("O maior número é: ", numero4)
+		}
+		senao
+		{
+			escreva("Os maiores números digitados são iguais!")
+		}
+	}
+}
